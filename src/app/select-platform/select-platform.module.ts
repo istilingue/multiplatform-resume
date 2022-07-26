@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { SelectPlatformRoutingModule } from './select-platform-routing.module';
 import { SelectPlatformComponent } from './select-platform.component';
+import { MacOsComponent } from '../platforms/mac-os/mac-os.component';
 
 
 @NgModule({
   declarations: [
-    SelectPlatformComponent
+    SelectPlatformComponent,
+    MacOsComponent
+
   ],
   imports: [
     CommonModule,

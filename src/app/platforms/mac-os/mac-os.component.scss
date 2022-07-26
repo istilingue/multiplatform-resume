@@ -1,0 +1,80 @@
+
+.container-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../../../assets/mac-bg.jpeg');
+  font-family: "San Francisco";
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 800;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+.bi{
+  font-size:1rem ;
+  color: rgba(255, 255, 255, 0.95);
+}
+.menus{
+  margin: 0 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+.navbar-div{
+  height: 3vh;
+  .navbar{
+    height: 100%;
+    background: rgba(83, 83, 83, 0.4);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    padding: 0;
+    &__left{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .bi-apple{
+     margin: 0 1rem;
+      }
+     
+    }
+    &__right{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .right{
+        margin-right: 0.5rem;
+      }
+      .bi-wifi{
+     margin: 0 1rem;
+      }
+
+    }
+
+  }
+}
+.content-div{
+  height: 88%;
+}
+.dock-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 9vh;  
+  .dock{
+    height:100% ;
+    border-radius: 16px;
+    background: rgba(83, 83, 83, 0.25);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+ 
+  }
+}
