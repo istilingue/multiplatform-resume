@@ -1,11 +1,12 @@
-
-.container-div{
+.container-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('../../../assets/mac-bg.jpeg');
+  background-image: url("../../../assets/macOs/mac-bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "San Francisco";
 }
 @font-face {
@@ -18,63 +19,155 @@
   font-weight: 800;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
 }
-.bi{
-  font-size:1rem ;
+.bi {
+  font-size: 0.8em;
   color: rgba(255, 255, 255, 0.95);
+  margin: 0 0.5rem;
+  text-shadow: 1px 1px 10px rgba(60, 66, 72, 0.342);
+  &.bi-battery-full {
+    font-size: 1rem;
+  }
 }
-.menus{
+.menus {
   margin: 0 0.9rem;
   color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
+  text-shadow: 2px 2px 3px rgba(60, 66, 72, 0.342);
+  &.time {
+    margin: 0 0.5rem;
+  }
+  &.main {
+    font-weight: 800;
+  }
 }
-.navbar-div{
+.navbar-div {
   height: 3vh;
-  .navbar{
+  .navbar {
     height: 100%;
     background: rgba(83, 83, 83, 0.4);
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     padding: 0;
-    &__left{
+    &__left {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      .bi-apple{
-     margin: 0 1rem;
+      .bi-apple {
+        margin: 0 1rem;
       }
-     
     }
-    &__right{
+    &__right {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      .right{
-        margin-right: 0.5rem;
-      }
-      .bi-wifi{
-     margin: 0 1rem;
+      .right {
+        margin-right: 0rem;
       }
 
+      .siri {
+        width: 1.1rem;
+        margin: 0 0.5rem;
+      }
     }
-
   }
 }
-.content-div{
+.content-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 88%;
+  .window {
+    display: flex;
+    margin: 0rem 5rem 3rem 0rem;
+    height: 80%;
+    border-radius: 16px;
+    background-color: rgba(38, 38, 38, 0.94);
+    box-shadow: 1px 9px 50px 5px rgba(21, 21, 28, 0.552);
+    border: 1px solid rgba(104, 104, 104, 0.552);
+  }
+  .lateral-menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+    .window-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0.5rem 1rem;
+      height: 3rem;
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 0.7rem;
+        width: 0.7rem;
+        border-radius: 50%;
+        margin: 0 3px;
+        .bi {
+          display: none;
+          color: #292727;
+          font-size: 0.6rem;
+          font-weight: bold;
+          &.bi-chevron-expand {
+            transform: rotate(45deg);
+          }
+        }
+        &.exit {
+          background-color: #ff5f56;
+          &:hover + .bi-x {
+            display: block;
+          }
+        }
+        &.minimize {
+          background-color: #febc2e;
+          &:hover + .bi-dash-lg {
+            display: flex;
+          }
+        }
+        &.full {
+          background-color: #27c840;
+          &:hover + .bi-chevron-expand {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .body {
+    height: 100%;
+    border-radius: 0 16px 16px 0;
+    background-color: #292727;
+    .header {
+      height: 3rem;
+      border-radius: 0 16px 0 0;
+      background-color: #3c3b3b;
+      border-bottom: 1px solid black;
+    }
+  }
 }
-.dock-div{
+.dock-div {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  height: 9vh;  
-  .dock{
-    height:100% ;
+
+  height: 9vh;
+  .dock {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
     border-radius: 16px;
     background: rgba(83, 83, 83, 0.25);
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
     border: 1px solid rgba(255, 255, 255, 0.18);
- 
+    * > {
+      box-shadow: 3px 6px 3px rgba(255, 255, 255, 0.18);
+    }
+    &__dock-itens {
+      width: 3rem;
+      image-rendering: crisp-edges;
+    }
   }
 }
