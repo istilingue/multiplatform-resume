@@ -1,16 +1,20 @@
 <div class="container-div col-12">
-    <div class="card-div col-5">
-      <h1 class="titulo">Bem vindo ao meu currículo multiplataforma!</h1>
-      <div class="text-div">
-        <h1 class="texto">
-          Me desafiei a criar um currículo de forma bem criativa, adicionando
-          minhas informações em layouts que todo mundo conhece bem!
-        </h1>
+  <div class="card-div col-5">
+    <h1 class="titulo">Bem vindo ao meu currículo multiplataforma!</h1>
+    <div class="text-div">
+      <h1 class="texto">
+        Me desafiei a criar um currículo de forma bem criativa, adicionando
+        minhas informações em layouts que todo mundo conhece bem!
+      </h1>
+    </div>
+    <div class="select-div col-6">
+      <h1 class="texto">Como você quer me conhecer?</h1>
+      <div class="dropdown">Plataformas
       </div>
-      <div class="select-div">
-        <h1 class="texto">Como você quer me conhecer?</h1>
-        
-      </div>
+
+      <ul class="select" name="" id="">
+        <li [value]='item' *ngFor="let item of platforms" (click)="redirect(item)">{{item}}</li>
+      </ul>
     </div>
   </div>
-  
+</div>
