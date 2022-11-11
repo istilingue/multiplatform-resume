@@ -3,7 +3,7 @@
     <div class="navbar col-12">
       <div class="navbar__left col-6">
         <i class="bi bi-apple"></i>
-        <span class="menus main">Finder</span>
+        <span class="menus main" [routerLink]="['']">Finder</span>
         <span class="menus">Arquivo</span>
         <span class="menus">Visualizar</span>
         <span class="menus">Ir</span>
@@ -30,6 +30,20 @@
           <div class="buttons exit"><i class="bi bi-x"></i></div>
           <div class="buttons minimize"> <i class="bi bi-dash-lg"></i></div>
           <div class="buttons full"><i class="bi bi-chevron-expand"></i></div>
+        </div>
+        <div class="contacts">
+          <span class="title">Contatos</span>
+          <div class="list">
+            <div class="list-item"> <i class="bi bi-whatsapp item-icon"></i>  </div>
+          </div>
+        </div>
+        <div class="languages">
+          <span class="title">Línguas</span>
+
+        </div>
+        <div class="programming">
+          <span class="title">Stack</span>
+
         </div>
       </div>
       <div class="body col-9">
